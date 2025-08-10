@@ -1,7 +1,10 @@
-@import "tailwindcss/base";
+/* @import "tailwindcss/base";
 @import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import "tailwindcss/utilities"; */
+@import "tailwindcss";
 
 body {
   background-color: #f0f4f8; /* 배경색을 연한 회색으로 설정 */
 }
+
+@custom-variant hover (&:hover);
