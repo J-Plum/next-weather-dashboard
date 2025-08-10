@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import Link from "next/link";
 
 export default function Error({ error, reset }) {
   useEffect(() => {
@@ -9,14 +10,23 @@ export default function Error({ error, reset }) {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen text-center p-4">
-      <h2 className="text-2xl font-bold text-red-500 mb-2">문제가 발생했습니다!</h2>
+      <h2 className="text-2xl font-bold text-red-500 mb-2">문제가 발생했습니다!!!</h2>
       <p className="text-gray-600 mb-4">날씨 정보를 가져오는 데 실패했습니다.</p>
-      <button
-        onClick={() => reset()}
-        className="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700 transition-colors"
-      >
-        다시 시도
-      </button>
+      <p className="text-gray-600 mb-4">도시명이 혹시 한글은 아닌가요?</p>
+      <div className="flex flex-row justify-between w-1/6 m-4 ">
+        <button
+          onClick={() => reset()}
+          className="bg-blue-600 text-white p-2 px-3 rounded-lg hover:bg-blue-700 transition-colors"
+        >
+          다시 시도
+        </button>
+        <Link
+          href="/"
+          className="bg-blue-600 text-white p-2 px-3 rounded-lg hover:bg-blue-700 transition-colors"
+        >
+          홈으로
+        </Link>
+      </div>
     </div>
   );
 }
