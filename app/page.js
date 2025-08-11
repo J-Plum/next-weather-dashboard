@@ -1,20 +1,8 @@
 "use client";
 
-import { useState } from "react";
-import { useRouter } from "next/navigation";
 import WeatherSearch from "@/components/WeatherSearch";
 
 export default function HomePage() {
-  const [city, setCity] = useState("");
-  const router = useRouter();
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (city.trim() !== "") {
-      router.push(`/weather/${city}`);
-    }
-  };
-
   return (
     <div className="flex flex-col items-center justify-center p-4">
       <h1 className="text-4xl font-bold mb-4">날씨 대시보드</h1>
