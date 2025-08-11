@@ -5,7 +5,7 @@ export default async function WeatherPage({ params }) {
 
   const weatherData = await getWeatherData(city);
 
-  return <WeatherDisplay weatherData={weatherData} city={city} />;
+  return <WeatherDisplay weatherData={weatherData} cy={city} />;
 }
 
 async function getWeatherData(city) {
