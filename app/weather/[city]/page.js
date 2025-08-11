@@ -1,11 +1,10 @@
 import WeatherDisplay from "./components/WeatherDisplay";
-
 export default async function WeatherPage({ params }) {
   const { city } = await params;
 
   const weatherData = await getWeatherData(city);
 
-  return <WeatherDisplay weatherData={weatherData} cy={city} />;
+  return <WeatherDisplay weatherData={weatherData} city={city} />;
 }
 
 async function getWeatherData(city) {

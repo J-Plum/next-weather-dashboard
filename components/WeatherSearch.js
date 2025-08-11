@@ -25,7 +25,7 @@ export default function WeatherSearch() {
       />
       <button
         type="submit"
-        className="mt-4 p-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition-colors"
+        className="mt-4 p-3 mb-10 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition-colors"
       >
         날씨 검색
       </button>
