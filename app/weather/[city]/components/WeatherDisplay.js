@@ -20,6 +20,7 @@ export default function WeatherDisplay({ city, weatherData }) {
           </div>
         </div>
       </div>
+      {/* TODO 인피니티 스크롤 추가할 부분 */}
       <div className="mt-4 p-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-4 gap-y-7 bg-[#f0f4f8] ">
         {forecast.map((weatherData) => {
           return <WeatherCard key={weatherData.date} weatherData={weatherData} />;
